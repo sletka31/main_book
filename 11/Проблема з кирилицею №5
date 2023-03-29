@@ -1,0 +1,4 @@
+<?php
+	$str = 'Моя країна';
+	echo mb_strlen($str); 
+?>
