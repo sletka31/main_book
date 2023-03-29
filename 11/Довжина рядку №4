@@ -1,0 +1,4 @@
+<?php
+	$str = 'My country';
+	echo strlen($str); 
+?>
