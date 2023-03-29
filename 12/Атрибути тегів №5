@@ -1,0 +1,3 @@
+<?php
+  echo '<textarea>Сонце світить!</textarea>';
+?>
