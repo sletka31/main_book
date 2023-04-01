@@ -1,0 +1,4 @@
+<?php
+	$str = 'It`s a dog';
+	echo $str[strlen($str) - 1];
+?>
