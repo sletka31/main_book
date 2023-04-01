@@ -1,0 +1,5 @@
+<?php
+    $arr = ['name' => 'Yasya', 'surname' => 'Storozhuk', 'patronymic' => 'Maxymivna'];
+    echo ($arr['surname'] . ' ' . $arr['name'] . ' ' . $arr['patronymic']);
+?>
+
