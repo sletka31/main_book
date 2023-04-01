@@ -1,0 +1,15 @@
+<?php
+	$num = 10;
+	$num = $num + 1;
+	$num = $num + 1;
+	$num = $num - 1;
+	echo $num;
+?>
+
+<?php
+	$num = 10;
+	$num++;
+	$num++;
+	$num--;
+	echo $num;
+?>
