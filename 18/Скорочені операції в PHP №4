@@ -1,0 +1,15 @@
+<?php
+	$str = 'a';
+	$str = $str . 'b';
+	$str = $str . 'c';
+	
+	echo $str;
+?>
+
+<?php
+	$str = 'a';
+	$str .= 'b';
+	$str .= 'c';
+	
+	echo $str;
+?>
