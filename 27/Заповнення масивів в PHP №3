@@ -1,0 +1,7 @@
+<?php
+	$arr = [];
+  $arr['year'] = 2023;
+  $arr['month'] = '04';
+  $arr['day'] = '02';
+  var_dump ($arr);
+?>
