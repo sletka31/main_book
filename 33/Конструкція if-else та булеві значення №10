@@ -1,0 +1,19 @@
+<?php
+	$test = true;
+	
+	if ($test == false) {
+		echo '+';
+	} else {
+		echo '-';
+	}
+?>
+
+<?php
+	$test = true;
+	
+	if (!$test) {
+		echo '+';
+	} else {
+		echo '-';
+	}
+?>
