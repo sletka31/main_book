@@ -1,0 +1,13 @@
+<?php
+  $day = 20;
+	
+	if ($day >= 1 and $day <= 10) {
+		echo 'перша декада'; 
+	} elseif ($day > 10 and $day <= 20) {
+		echo 'друга декада'; 
+	} elseif ($day >= 21 and $day <= 31) {
+		echo 'третя декада'; 
+	} else {
+    echo 'значення змінної $day невірне';
+  }
+?>
