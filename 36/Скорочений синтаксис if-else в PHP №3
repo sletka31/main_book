@@ -1,0 +1,15 @@
+<?php
+	if ($test == 0) {
+		echo 'верно';
+	}
+?>
+
+
+<?php
+	if ($test == 0) echo 'верно';
+?>
+
+<?php
+	if ($test == 0) 
+		echo 'верно';
+?>
