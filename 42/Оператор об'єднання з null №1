@@ -1,0 +1,14 @@
+<?php
+	$user = ['name' => 'john', 'age' => 30];
+	
+	if (isset($user['name'])) {
+		$name = $user['name'];
+	} else {
+		$name = 'unknown';
+	}
+?>
+  
+  
+  <?php
+  $name = $user['name'] ?? 'unknown';
+    
