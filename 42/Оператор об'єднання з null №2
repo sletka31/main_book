@@ -1,0 +1,13 @@
+<?php
+	if (isset($user['name'])) {
+		$result = $user['name'];
+	} elseif (isset($user['surname'])) {
+		$result = $user['surname'];
+	} else {
+		$result = '';
+	}
+?>
+
+
+<?php
+$result = $user['name'] ?? $user['surname'] ?? 'empty';
