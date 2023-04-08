@@ -9,9 +9,9 @@
 
 
 <?php
-	$i = 10;
+$i = 10;
 	
-	while ($i >= 0) {
-		echo $i;
-		$i--;
-	}
+hile ($i >= 0) {
+echo $i;
+$i--;
+}
