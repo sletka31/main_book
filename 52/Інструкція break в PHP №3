@@ -1,0 +1,9 @@
+<?php 
+$arr = [1, 3, 3, 4, 5];
+	
+foreach ($arr as $key => $elem) {
+  if ($elem === 3) {
+	  echo $key;
+		break; 
+	}
+}
