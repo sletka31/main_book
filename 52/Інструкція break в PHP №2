@@ -1,1 +1,11 @@
+<?php
+$arr = [10, 9, 5, 7, 0, -6, 11];
+$result = 0;
 
+foreach ($arr as $elem) {
+  $result = $result + $elem;
+  if ($elem < 0) {
+    break;
+  }
+}
+echo $result;
