@@ -1,0 +1,21 @@
+Найдите сумму всех его элементов.
+
+<?php
+$arr = [[1, 2], [3, 4], [5, 6]];
+$s = 0;
+$s = $arr[0][0] + $arr[0][1] + $arr[1][0] + $arr[1][1] + $arr[2][0] + $arr[2][1];
+
+echo $s;
+?>
+
+
+<?php
+$arr = [[1, 2], [3, 4], [5, 6]];
+$sum = 0;
+
+foreach ($arr as $elem) {
+  foreach ($elem as $elem1) {
+    $sum +=$elem1;
+  }
+}
+echo $sum;
