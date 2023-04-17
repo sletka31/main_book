@@ -2,24 +2,24 @@
 
 
 <?php
-	$products = [
-		[
-			'name'   => 'мясо',
-			'price'  => 100,
-			'amount' => 5,
-		],
-		[
-			'name'   => 'овощи',
-			'price'  => 200,
-			'amount' => 6,
-		],
-		[
-			'name'   => 'фрукты',
-			'price'  => 300,
-			'amount' => 7,
-		],
-	];
+$products = [
+	[
+	  'name'   => 'мясо',
+	  'price'  => 100,
+	  'amount' => 5,
+	],
+	[
+	  'name'   => 'овощи',
+	  'price'  => 200,
+	  'amount' => 6,
+	],
+	[
+	  'name'   => 'фрукты',
+	  'price'  => 300,
+	  'amount' => 7,
+	],
+];
 
 foreach ($products as $product) {
-	  echo $product['name'] . ': ' . $product['amount'] . ' кг ' . $product['price'] . ' грн за 1 кг' . '<br>';
-	}
+  echo $product['name'] . ': ' . $product['amount'] . ' кг коштує ' . $product['price'] . ' грн' . '<br>';
+}
