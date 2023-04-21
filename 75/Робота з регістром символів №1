@@ -1,1 +1,6 @@
+Дана строка 'php'. Сделайте из нее строку 'PHP'.
 
+
+<?php
+$str = 'php';
+echo strtoupper($str);
