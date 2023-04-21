@@ -1,0 +1,6 @@
+Дана строка 'london'. Сделайте из нее строку 'London'.
+
+
+<?php
+$str = 'london';
+echo ucfirst($str);
