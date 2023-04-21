@@ -1,0 +1,7 @@
+Дана строка. Проверьте, что она начинается на 'http://'.
+
+
+<?php
+$str = 'https://github.com/sletka31/main_book/new/main/75';
+
+echo substr($str, 0, 8);
