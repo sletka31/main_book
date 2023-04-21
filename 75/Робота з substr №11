@@ -4,4 +4,10 @@
 <?php
 $str = 'https://github.com/sletka31/main_book/new/main/75';
 
-echo substr($str, 0, 8);
+if (substr($str, 0, 7) == 'http://') 
+{
+  echo "Рядок починається з 'http://'.";
+} else {
+    echo "Рядок не починається з 'http://'.";
+}
+
