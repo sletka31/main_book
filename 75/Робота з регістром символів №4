@@ -1,0 +1,6 @@
+Дана строка 'London'. Сделайте из нее строку 'london'.
+
+
+<?php
+$str = 'London';
+echo lcfirst($str);
