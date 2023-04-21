@@ -1,0 +1,9 @@
+Дана строка 'html css php'. Вырежьте из нее и выведите на экран слово 'html', слово 'css' и слово 'php'.
+
+
+<?php
+$str = 'html css php';
+
+echo substr($str, 0, 4) . ' ';
+echo substr($str, 5, 3) . ' ';
+echo substr($str, -3);
