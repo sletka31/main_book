@@ -1,0 +1,11 @@
+Проверьте, что строка начинается на 'http://'.
+
+
+<?php
+$str = 'http://www.writephponline.com/';
+
+if (strpos($str, 'http://') === 0) {
+  echo 'Так';
+} else {
+  echo 'Ні';
+}
