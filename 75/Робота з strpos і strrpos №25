@@ -1,0 +1,11 @@
+Проверьте, что в строке есть две точки подряд.
+
+
+<?php
+$str = 'aaa aaa aaa .. aaa aaa';
+
+if (strpos($str, '..') > 1) {
+  echo 'Так';
+} else {
+  echo 'Ні';
+}
