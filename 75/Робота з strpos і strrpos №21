@@ -1,0 +1,5 @@
+Дана строка 'abc abc abc'. Определите позицию первой буквы 'b'.
+
+
+<?php
+echo strpos('abc abc abc', 'b');
