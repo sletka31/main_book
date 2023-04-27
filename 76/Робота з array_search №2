@@ -1,0 +1,15 @@
+Дан массив:
+
+<?php
+	$arr = ['a', '-', 'b', '-', 'c', '-', 'd'];
+?>
+Найдите позицию первого элемента '-' и удалите его с помощью функции array_splice.
+
+
+
+<?php
+$arr = ['a', '-', 'b', '-', 'c', '-', 'd'];
+$result = array_search('-', $arr);
+$cut = array_splice ($arr, $result, 1);
+	
+var_dump($arr);
