@@ -1,0 +1,25 @@
+Узнайте какой день недели был 100 дней назад.
+
+
+<?php
+$time = time();
+$time2 = 100*24*60*60;
+
+$result = $time - $time2;
+$day = date ('w', $result);
+//echo($day);
+if ($day == 0) {
+  echo 'Неділя';
+} elseif ($day == 1) {
+  echo 'Понеділок';
+} elseif ($day === 2) {
+  echo 'Вівторок';
+} elseif ($day == 3) {
+  echo 'Середа';
+} elseif ($day == 4) {
+  echo 'Четвер';
+} elseif ($day == 5) {
+  echo "П'ятниця";
+} else{
+  echo 'Субота';
+}
