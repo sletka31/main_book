@@ -1,0 +1,10 @@
+Дано число. Найдите сумму цифр этого числа.
+
+
+<?php
+$num = 321;
+
+$arr = str_split ($num, 1);
+$sum = array_sum ($arr);
+echo $sum;
+
