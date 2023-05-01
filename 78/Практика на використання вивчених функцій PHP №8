@@ -1,0 +1,10 @@
+Дана строка. Сделайте заглавным последний символ этой строки.
+
+
+<?php
+$str = 'The dog is black';
+$str = strrev ($str);
+$str = ucfirst ($str);
+$str = strrev ($str);
+
+echo $str;
