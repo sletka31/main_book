@@ -1,0 +1,9 @@
+Заполните массив числами от 1 до 26 так, чтобы ключами этих чисел были буквы английского алфавита:
+
+
+<?php
+$keys = range ('a', 'z');
+$elems = range (1, 26);
+
+$result = array_combine ($keys, $elems);
+var_dump ($result);
