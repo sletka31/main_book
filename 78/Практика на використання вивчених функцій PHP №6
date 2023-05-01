@@ -1,0 +1,9 @@
+Найдите факториал заданного числа.
+
+
+<?php
+$num = 3;
+$arr = range (1, $num);
+
+$prod = array_product ($arr);
+echo $prod;
