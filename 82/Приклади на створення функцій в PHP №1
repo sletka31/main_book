@@ -1,0 +1,17 @@
+Напишите функцию, которая будет находить сумму квадратных корней элементов массива.
+
+
+
+<?php
+function getSqrtSum ($arr) {
+  $sum = 0;
+  
+  foreach ($arr as $elem) {
+    $sum += sqrt ($elem);
+  }
+  return $sum;
+}
+
+$arr = [4, 9, 16, 25];
+
+echo getSqrtSum ($arr);
