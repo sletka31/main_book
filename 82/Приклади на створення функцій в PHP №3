@@ -15,9 +15,8 @@ function delElem($num, $arr) {
   return $arr1;
 }
 $arr = [1, 2, 3, 2, 2, 4, 5];
-
-//var_dump (delElem(2, $arr));
+$result = (delElem(2, $arr));
 
 echo '<pre>';
-print_r (delElem(2,$arr));
+print_r ($result);
 echo '</pre>';
