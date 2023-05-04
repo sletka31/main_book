@@ -3,35 +3,21 @@
 
 
 <?php
-
-
-$arr = [1, 2, 3, 5];
-foreach ($arr as $key => $elem) {
-if ($elem[$key] === 2) {
-unset($elem[$key]);
+function delElem($num, $arr) {
+  $arr1=[];
+  foreach ($arr as $elem) {
+  if ($elem !== $num) {
+    $arr1 [] = $elem;
+    } else {
+    continue;
+    }
+  }
+  return $arr1;
 }
-}
-var_dump($arr);
-?>
+$arr = [1, 2, 3, 2, 2, 4, 5];
 
+//var_dump (delElem(2, $arr));
 
-
-
-
-<?php
-	function func($num,$arr)	
-	{
-	    foreach ($arr as $elem){
-		if ($num != $elem) {
-			return true;
-		} else {
-			return false;
-		}
-	    }
-	}
-	
-	$arr = [1, -1, 2, -2, 3, -3];
-	func (3, $arr); 
-	
-	$result = array_filter($arr, 'func');
-	var_dump($result);
+echo '<pre>';
+print_r (delElem(2,$arr));
+echo '</pre>';
