@@ -1,0 +1,37 @@
+Сделайте функцию delElem, которая параметрами будет принимать значение и массив и удалять из массива все элементы с таким значением.
+
+
+
+<?php
+
+
+$arr = [1, 2, 3, 5];
+foreach ($arr as $key => $elem) {
+if ($elem[$key] === 2) {
+unset($elem[$key]);
+}
+}
+var_dump($arr);
+?>
+
+
+
+
+
+<?php
+	function func($num,$arr)	
+	{
+	    foreach ($arr as $elem){
+		if ($num != $elem) {
+			return true;
+		} else {
+			return false;
+		}
+	    }
+	}
+	
+	$arr = [1, -1, 2, -2, 3, -3];
+	func (3, $arr); 
+	
+	$result = array_filter($arr, 'func');
+	var_dump($result);
