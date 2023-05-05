@@ -1,0 +1,20 @@
+Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд.
+
+
+
+<?php
+function isSameElem ($arr) {
+  $lenght = count ($arr) - 1;
+  for ($i = 0; $i < $lenght; $i++) {
+    if ($arr[$i] === $arr[$i+1]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+$arr = [1, 2, 3, 4, 6];
+var_dump (isSameElem ($arr));
+
+
+
