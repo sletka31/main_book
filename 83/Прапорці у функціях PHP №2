@@ -1,0 +1,16 @@
+Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными.
+
+
+
+<?php
+function isPair ($num) {
+  $num = (string) $num;    
+  for ($i = 0; $i < strlen($num); $i++) {
+    if ($num [$i] % 2 !== 0) {
+      return true;
+    }
+  }
+    return false;
+}
+
+echo (isPair (81)); 
