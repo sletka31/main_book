@@ -2,15 +2,14 @@
 
 
 
-<?php
-function isPair ($num) {
+function isNotPair ($num) {
   $num = (string) $num;    
   for ($i = 0; $i < strlen($num); $i++) {
-    if ($num [$i] % 2 !== 0) {
-      return true;
-    }
-  }
-    return false;
+    if ($num [$i] % 2 == 0) {
+      return false;
+    } 
+  } 
+    return true;
 }
 
-echo (isPair (81)); 
+var_dump (isNotPair (1131)); 
