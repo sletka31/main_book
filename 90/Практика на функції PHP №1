@@ -4,13 +4,8 @@
 
 <?php
 function isFriendly ($num1, $num2) {
-    if (getSumDivisiorsNum(getDivisiorsNum ($num2)) === $num1 && getSumDivisiorsNum(getDivisiorsNum ($num1)) === $num2) {
-        return true;
-    } else {
-        return false;
-    }
+    return getSumDivisiorsNum(getDivisiorsNum ($num2)) === $num1 && getSumDivisiorsNum(getDivisiorsNum ($num1)) === $num2;
 }
-
 function getDivisiorsNum ($num) {
     $arr = [];
     
@@ -28,6 +23,6 @@ function getSumDivisiorsNum ($arr) {
     for ($i = 0; $i < $lenght; $i++) {
         $sum += $arr[$i];
     } return $sum;
-} 
+}
 
 echo isFriendly (5020, 5564);
