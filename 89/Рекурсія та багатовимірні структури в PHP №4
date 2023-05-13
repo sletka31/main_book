@@ -8,6 +8,18 @@
 
 
 <?php
+function func ($arr) {
+  $lenght = count ($arr);
+  
+  for ($i = 0; $i < $lenght; $i++) {
+    if (is_array ($arr[$i])) {
+      $arr[$i] = func ($arr[$i]);
+    } else {
+      $arr[$i] = $arr[$i] * $arr[$i];
+    }
+  } return $arr;
+}
+var_dump(func ([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
 
 
 
