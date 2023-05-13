@@ -1,0 +1,30 @@
+/*Сделайте функцию, которая будет проверять число на совершенность. Совершенное число - это число, сумма собственных делителей которого равна этому числу.*/
+
+
+<?php
+function isPerfectNum ($num) {
+    return getSumDivisiorsNum(getDivisiorsNum ($num)) === $num;
+}
+
+function isFriendly ($num1, $num2) {
+    return getSumDivisiorsNum(getDivisiorsNum ($num2)) === $num1 && getSumDivisiorsNum(getDivisiorsNum ($num1)) === $num2;
+}
+function getDivisiorsNum ($num) {
+    $arr = [];
+    
+    for ($i = 1; $i < $num; $i++) {
+        if ($num % $i === 0) {
+            $arr[] = $i;
+        }
+    } return $arr;
+}
+
+function getSumDivisiorsNum ($arr) {
+    $sum = 0;
+    $lenght = count ($arr);
+    
+    for ($i = 0; $i < $lenght; $i++) {
+        $sum += $arr[$i];
+    } return $sum;
+}
+echo isPerfectNum (28);
