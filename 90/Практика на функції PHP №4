@@ -1,0 +1,52 @@
+/*Найдите все счастливые билеты. Счастливый билет - это билет, в котором сумма первых трех цифр его номера равна сумме вторых трех цифр его номера.*/
+
+
+<?php
+function func() {
+    $arr = [];
+for($i = 000001; $i <= 999999; $i++){
+    $number1 = $i/100000;
+    $number2 = ($i/10000)%10;
+    $number3 = ($i/1000)%10;
+    $number4 = ($i/100)%10;
+    $number5 = ($i/10)%10;
+    $number6 = $i%10;
+
+    if($number1 + $number2 + $number3 == $number4 + $number5 + $number6){
+        $arr [] = $i;
+    }
+} return $arr;
+
+} var_dump(func()); 
+
+?>
+
+
+<?php
+function getLuckyTicket ($num) {
+    $arr1 = [];
+    if (sum1 ($num) === sum2 ($num)) {
+       return $num;
+    } else {
+        return false;
+    }
+} 
+echo (getLuckyTicket(111111, 111111));
+
+function sum1 ($num) {
+    $num = (string) $num; 
+    $summ1 = 0;
+    for ($i = 0; $i <=2; $i++) {
+        $summ1 += $num[$i];
+    } return $summ1;
+} 
+
+
+function sum2 ($num) {
+    $num = (string) $num;
+    $summ2 = 0;
+    for ($i = 3; $i <=5; $i++) {
+        $summ2 += $num[$i];
+    } return $summ2;
+} 
+
