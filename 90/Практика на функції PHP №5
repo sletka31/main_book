@@ -5,9 +5,7 @@
 function getGenerVisitorsNum ($num1, $num2) {
     $result = [];
     
-    if (is_array(getDivisiors($num1)) && is_array(getDivisiors($num2))) {
-        $result = array_intersect(getDivisiors($num1), getDivisiors($num2));
-    } return $result;
+    return $result = array_intersect(getDivisiors($num1), getDivisiors($num2));
 } 
 var_dump(getGenerVisitorsNum (50, 100));
 
