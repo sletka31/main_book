@@ -1,0 +1,14 @@
+/*Дана строка:
+
+<?php
+	$str = 'aa aba abba abbba abbbba abbbbba';
+?>
+Напишите регулярку, которая найдет строки 'abba', 'abbba', 'abbbba' и только их.*/
+
+
+
+<?php
+$str = 'aa aba abba abbba abbbba abbbbba';
+$res = preg_replace('#ab{2,4}a#', '!', $str);
+
+echo $res;
