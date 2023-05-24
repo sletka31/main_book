@@ -8,6 +8,6 @@
 
 <?php
 $str = 'xaz x.z x3z x@z x$z xrz';
-$res = preg_replace('#a[^.@$]z#', '!', $str);
+$res = preg_replace('#x[^.@$]z#', '!', $str);
 
 echo $res;
