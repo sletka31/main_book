@@ -1,0 +1,13 @@
+/* Дана строка:
+
+<?php
+	$str = 'aba aea aca aza axa a.a a+a a*a';
+?>
+Напишите регулярку, которая найдет строки 'a.a', 'a+a', 'a*a', не затронув остальных.
+
+
+<?php
+$str = 'aba aea aca aza axa a.a a+a a*a';
+$res = preg_replace('#a[.+*]a#', '!', $str);
+
+echo $res;
