@@ -8,6 +8,6 @@
 
 <?php
 $str = 'abc def xyz';
-$res = preg_replace('#^a#', '!', $str);
+$res = preg_replace('#^[a-zA-Z]+#', '!', $str);
 
 echo $res;
