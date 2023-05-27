@@ -8,6 +8,6 @@
 
 <?php
 $str = 'a\\b c\\d e\\f';
-$res = preg_replace('#[a-z]\\\\+[a-z]#', '!', $str);
+$res = preg_replace('#[a-z]\\\\[a-z]#', '!', $str);
 
 echo $res;
