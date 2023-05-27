@@ -3,3 +3,4 @@
 
 
 <?php
+echo preg_match('#[php$ | txt$ | html$]#', 'file.txt');
