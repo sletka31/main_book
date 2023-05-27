@@ -1,0 +1,13 @@
+/* Дана строка:
+
+<?php
+	$str = 'aaa xaa aaa xbb aaa';
+?>
+Напишите регулярку, которая найдет строки по шаблону: буква 'x' в начале слова.*/
+
+
+<?php
+$str = 'aaa xaa aaa xbb aaa';
+$res = preg_replace('#\bx[a-z]+\b#', '!', $str);
+
+echo $res;
