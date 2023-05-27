@@ -3,4 +3,4 @@
 
 
 <?php
-echo preg_match('#[php$ | txt$ | html$]#', 'file.txt');
+echo preg_match('#(txt | html | php)$#', 'file.com');
