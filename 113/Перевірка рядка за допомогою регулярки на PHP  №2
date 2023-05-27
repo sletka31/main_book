@@ -2,4 +2,4 @@
 
 
 <?php
-echo preg_match('#http?#', 'http://code.mu/ru/php/book/prime/regular/string-checking/');
+echo preg_match('#^(http):#', 'https://code.mu/ru/php/book/prime/regular/string-checking/');
