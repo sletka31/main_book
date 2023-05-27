@@ -1,0 +1,5 @@
+/* Определите, начинается ли переданная строка с http или с https.*/
+
+
+<?php
+echo preg_match('#^[httphttps]#', 'https://code.mu/ru/php/book/prime/regular/string-checking/');
