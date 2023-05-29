@@ -8,6 +8,6 @@
 
 <?php
 $str = 'aaa bbb ccc xyz';
-$res = preg_replace('#([a-z])+\g{1}#', '!', $str);
+$res = preg_replace('#([a-z]){2}\g{1}#', '!', $str);
 
 echo $res;
