@@ -1,0 +1,13 @@
+/*Дана строка:
+
+<?php
+	$str = 'aaa bbb ccc xyz';
+?>
+Найдите все подстроки, в которых есть три одинаковые буквы подряд.*/
+
+
+<?php
+$str = 'aaa bbb ccc xyz';
+$res = preg_replace('#([a-z])+\g{1}#', '!', $str);
+
+echo $res;
