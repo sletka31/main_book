@@ -1,0 +1,13 @@
+/* Дана строка:
+
+<?php
+	$str = 'a aa aaa abab bbbb';
+?>
+Найдите все подстроки, в которых есть две и более одинаковые буквы подряд.*/
+
+
+<?php
+$str = 'a aa aaa abab bbbb';
+$res = preg_replace('#([a-z]){1,}\g{1}#', '!', $str);
+
+echo $res;
