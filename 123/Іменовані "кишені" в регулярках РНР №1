@@ -7,8 +7,25 @@
 
 
 <?php
+
 $str = '12:59:59';
 $reg = '#(?<hour>\d{2}):(?<minutes>\d{2}):(?<seconds>\d{2})#';
 	
 preg_match($reg, $str, $match);
-var_dump($match);
+//var_dump($match);
+
+function deleteNumber($match) {
+  $arr = [];
+  foreach ($match as $key => $elem) {
+    $key = (int) $key;
+    if ($key = '#[a-z]+$#') {
+    $arr [] = $elem;
+    }
+       
+  }
+  return $arr; 
+}
+
+var_dump (deleteNumber ($match));
+
+не працює
