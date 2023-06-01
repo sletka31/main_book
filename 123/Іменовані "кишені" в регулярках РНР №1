@@ -17,9 +17,9 @@ preg_match($reg, $str, $match);
 function deleteNumber($match) {
   $arr = [];
   foreach ($match as $key => $elem) {
-    $key = (int) $key;
-    if ($key = '#[a-z]+$#') {
-    $arr [] = $elem;
+  
+    if ($key >100 ) {
+    $arr [] = $key;
     }
        
   }
@@ -28,4 +28,3 @@ function deleteNumber($match) {
 
 var_dump (deleteNumber ($match));
 
-не працює
