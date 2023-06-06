@@ -1,0 +1,16 @@
+/* Дана строка, содержащая имена функций:
+
+<?php
+	$str = 'func1() func2() func3()';
+?>
+Получите массив имен функций из строки.
+*/
+
+
+<?php
+$str = 'func1() func2() func3()';
+$reg = '#(func[0-9]{1})(?=\(\))#';
+preg_match_all($reg, $str, $res);
+$var = $res [0];
+
+var_dump ($var);
