@@ -10,8 +10,8 @@
 
 <?php
 $str = '<a href="" class="eee" id="zzz">';
-$reg = '#(a)\s([a-z]+)=(?=.+)#';
+$reg = '#([a-z]+)(?=\=)#';
 preg_match_all($reg, $str, $res);
-$var = $res [2];
+$var = $res [1];
 
 var_dump ($var);
