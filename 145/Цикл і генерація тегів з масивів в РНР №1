@@ -1,0 +1,22 @@
+/*
+Дан массив:
+
+<?php
+	$arr = ['text1', 'text2', 'text3'];
+?>
+Сформируйте с его помощью следующий HTML код:
+
+<select>
+	<option>text1</option>
+	<option>text2</option>
+	<option>text3</option>
+</select>
+*/
+
+
+<?php
+$arr = ['text1', 'text2', 'text3'];
+
+foreach ($arr as $elem) {
+	echo "<select><opteion>$elem</option></select>";
+}
