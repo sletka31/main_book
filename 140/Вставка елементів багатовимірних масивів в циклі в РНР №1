@@ -1,0 +1,48 @@
+/*
+Дан следующий массив:
+
+<?php
+	$products = [
+		[
+			'name'   => 'product1',
+			'price'  => 100,
+			'amount' => 5,
+		],
+		[
+			'name'   => 'product2',
+			'price'  => 200,
+			'amount' => 6,
+		],
+		[
+			'name'   => 'product3',
+			'price'  => 300,
+			'amount' => 7,
+		],
+	];
+?>
+Выведите с помощью этого массива столбец продуктов в каком-нибудь придуманном вами формате.
+*/
+
+
+<?php
+	$products = [
+		[
+			'name'   => 'полуниця',
+			'price'  => 100,
+			'amount' => 5,
+		],
+		[
+			'name'   => 'черешня',
+			'price'  => 200,
+			'amount' => 6,
+		],
+		[
+			'name'   => 'абрикоси',
+			'price'  => 300,
+			'amount' => 7,
+		],
+	];
+	
+	foreach ($products as $product) {
+	    echo "$product[name] вартістю $product[price] грн/кг вагою $product[amount] кг <br>";
+	}
