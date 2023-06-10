@@ -1,0 +1,12 @@
+/*
+Упростите следующий код:
+
+<?php
+	$name = 'user';
+	echo 'hello, ' . $name . '!';
+?>
+*/
+
+<?php
+	$name = 'user';
+	echo "hello,  $name!";
