@@ -1,0 +1,20 @@
+/*
+Даны три переменные:
+
+<?php
+	$src1 = '1.png';
+	$src2 = '2.png';
+	$src3 = '3.png';
+?>
+Сформируйте с помощью этих переменных три тега img.
+*/
+
+
+<?php
+	$src1 = '1.png';
+	$src2 = '2.png';
+	$src3 = '3.png';
+	
+	echo "<img src=\"$src1\" alt=\"Опис\">";
+	echo "<img src=\"$src2\" alt=\"Опис\">";
+	echo "<img src=\"$src3\" alt=\"Опис\">";
