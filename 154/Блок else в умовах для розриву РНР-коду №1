@@ -1,0 +1,39 @@
+/*
+Дана переменная:
+
+<?php
+	$show = true;
+?>
+Дан код:
+
+<div>
+	<p>text+</p>
+	<p>text+</p>
+	<p>text+</p>
+</div>
+<div>
+	<p>text-</p>
+	<p>text-</p>
+	<p>text-</p>
+</div>
+Выведите первый див, если переменная show равна true, и второй див, если переменная равна false.
+*/
+
+
+<?php
+  $show = false;
+?>
+
+<?php if ($show): ?>
+	<div>
+	  <p>text+</p>
+	  <p>text+</p>
+	  <p>text+</p>
+        </div>
+<?php else: ?>
+	<div>
+	<p>text-</p>
+	<p>text-</p>
+	<p>text-</p>
+</div>
+<?php endif; ?>
