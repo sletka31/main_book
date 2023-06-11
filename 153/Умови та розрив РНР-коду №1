@@ -1,0 +1,28 @@
+/*
+Дана переменная:
+
+<?php
+	$show = true;
+?>
+Дан код:
+
+<div>
+	<p>text1</p>
+	<p>text2</p>
+	<p>text3</p>
+</div>
+Выведите приведенный HTML код, если переменная show равна true.
+*/
+
+
+<?php
+  $show = true;
+?>
+
+<?php if ($show): ?>
+	<div>
+	  <p>text1</p>
+	  <p>text2</p>
+	  <p>text3</p>
+        </div>
+<?php endif; ?>
