@@ -1,0 +1,61 @@
+/*
+Дан следующий массив:
+
+<?php
+	$products = [
+		[
+			'name'   => 'product1',
+			'price'  => 100,
+			'amount' => 5,
+		],
+		[
+			'name'   => 'product2',
+			'price'  => 200,
+			'amount' => 6,
+		],
+		[
+			'name'   => 'product3',
+			'price'  => 300,
+			'amount' => 7,
+		],
+	];
+?>
+Сформируйте с его помощью HTML таблицу.
+*/
+
+
+<?php
+		$products = [
+		[
+			'name'   => 'product1',
+			'price'  => 100,
+			'amount' => 5,
+		],
+		[
+			'name'   => 'product2',
+			'price'  => 200,
+			'amount' => 6,
+		],
+		[
+			'name'   => 'product3',
+			'price'  => 300,
+			'amount' => 7,
+		],
+	];
+	
+	echo '<table>';
+	foreach ($products as $row) {
+		echo '<tr>';
+		foreach ($row as $key => $cell) {
+			if ($key === 'price') {
+				$cell .= ' dollars';
+			}
+			
+			if ($key === 'amount') {
+				$cell .= ' kg';
+			}
+			echo "<td>$cell</td>";
+		}
+		echo '</tr>';
+	}
+	echo '</table>';
