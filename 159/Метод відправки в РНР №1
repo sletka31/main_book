@@ -1,0 +1,20 @@
+/*На странице index.php сделайте форму. Отправьте ее на страницу result.php. Проверьте оба метода отправки формы.*/
+
+
+
+Метод відправки GET:
+<form action="result.php" method="GET">
+	<input name="name">
+	<input name="age">
+	<input name="salary">
+	<input type="submit">
+</form>
+
+
+Метод відправки POST:
+<form action="result.php" method="POST">
+	<input name="name">
+	<input name="age">
+	<input name="salary">
+	<input type="submit">
+</form>
