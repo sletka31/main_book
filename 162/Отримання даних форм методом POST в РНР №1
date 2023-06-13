@@ -1,0 +1,15 @@
+/* С помощью формы спросите у пользователя его имя и возраст. После отправки формы выведите эти данные на экран. */
+
+
+Файл form.php:
+<form action="/result.php" method="GET">
+	<input name="name">
+	<input name="age">
+	<input type="submit">
+</form>
+
+
+Файл result.php:
+<?php	
+	echo $_GET['name'] . ': ' . $_GET['age'] . ' років';
+?>
