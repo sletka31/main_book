@@ -1,1 +1,16 @@
 /* Сделайте форму с тремя инпутами. Пусть в эти инпуты вводятся числа. После отправки формы выведите на экран сумму этих чисел.*/
+
+
+Файл form.php:
+<form action="/result.php" method="GET">
+	<input name="test1">
+	<input name="test2">
+	<input name="test3">
+	<input type="submit">
+</form>
+
+
+Файл result.php:
+<?php
+	echo $_GET['test1'] + $_GET['test2'] + $_GET['test3'];
+?>
