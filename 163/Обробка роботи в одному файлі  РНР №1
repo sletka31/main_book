@@ -1,0 +1,15 @@
+/*Спросите у пользователя фамилию, имя и отчество. После отправки формы выведите на экран введенные данные.*/
+
+
+<form action="" method="GET">
+	<input name="surname">
+	<input name="firstname">
+	<input name="middlename">
+	<input type="submit">
+</form>
+
+<?php
+  if (!empty($_GET)) {
+	echo $_GET['surname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['middlename'];
+  }
+?>
