@@ -7,16 +7,20 @@
 		value="<?php
 			if (isset($_GET['year']))
 				echo $_GET['year'];
-			else echo '2023' 
+			else echo date ('Y') 
 		?>"
 	>
 	<input type="submit">
 </form>
 
 <?php
-  if () {
-    echo $_GET['year'] . ' - вісокосний рік';
-  } else {
-    echo $_GET['year'] . ' - невісокосний рік';
-  }
- ?>
+
+  if(!empty($_GET['year'])) {
+    $year = $_GET['year'];
+    if(checkdate(2, 29, $year)) {
+        echo "Рік $year - вісокосний";
+    } else {
+        echo "Рік $year - не вісокосний";
+    }
+}
+?>
