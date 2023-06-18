@@ -1,0 +1,41 @@
+/* С помощью трех инпутов спросите у пользователя год, месяц и день. После отправки формы выведите на экран, сколько дней осталось от введенной даты до Нового Года.
+По заходу на страницу сделайте так, чтобы в инпутах стояла текущая дата. */
+
+
+<form action="" method="GET">
+	<input
+		name="year"
+		value="<?php
+			if (isset($_GET['year']))
+				echo $_GET['year'];
+			else echo date ('Y') 
+		?>"
+	>
+	<input
+		name="year"
+		value="<?php
+			if (isset($_GET['month']))
+				echo $_GET['month'];
+			else echo date ('m') 
+		?>"
+	>
+	<input
+		name="year"
+		value="<?php
+			if (isset($_GET['day']))
+				echo $_GET['day'];
+			else echo date ('d') 
+		?>"
+	>
+	<input type="submit">
+</form>
+
+<?php
+$mon=$_GET['month'];
+$day=$_GET['day'];
+$date1 = mktime (0, 0, 0, 12, 31);
+$date2 = mktime (0, 0, 0, $mon, $day);
+$result = $date1 - $date2;
+
+echo floor($result/(24*60*60));
+	
