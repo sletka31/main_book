@@ -1,1 +1,13 @@
 /*С помощью двух переключателей спросите у пользователя его пол. Выведите результат на экран.*/
+
+
+<form action="" method="GET">
+	<input type="hidden" name="radio" value="0">
+	<input type="radio"  name="radio" value="Чол.">
+	<input type="radio"  name="radio" value="Жін.">
+	<input type="submit">
+</form>
+<?php
+	if (!empty($_GET['radio'])) echo $_GET['radio'];
+?>
+
