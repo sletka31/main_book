@@ -1,0 +1,22 @@
+/*С помощью флажка спросите у пользователя, есть ему уже 18 лет или нет. Если есть, разрешите ему доступ на сайт, а если нет - не разрешите.*/
+
+
+<form action="" method="GET">
+	<input type="hidden" name="flag" value="0">
+	<input type="checkbox" name="flag" value="1">
+	<input name="age">
+	<input type="submit">
+</form>
+<?php
+	if (!empty($_GET)) {
+		if ($_GET['flag'] === '1') {
+		  if ($_GET['age'] >= 18) {
+			echo 'Дозволений доступ до сайту';
+		  } else {
+		    echo 'Доступ не дозволено';
+		  }
+		} else {
+			echo 'Введіть значення та активуйте чекбокс :))';
+		}
+	}
+?>
