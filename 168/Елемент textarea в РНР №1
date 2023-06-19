@@ -1,0 +1,14 @@
+/* Попросите пользователя оставить отзыв на сайт. После отправки формы выведите этот отзыв на экран.*/
+
+
+
+<form action="" method="GET">
+	<textarea name="comment">
+	</textarea>
+	<input type="submit">
+</form>
+<?php  
+if (!empty($_GET['comment'])) {
+  echo $_GET['comment'];
+} 
+?>
