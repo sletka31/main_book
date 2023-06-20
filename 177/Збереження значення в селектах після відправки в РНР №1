@@ -1,0 +1,27 @@
+/* Модифицируйте предыдущую задачу так, чтобы выбранное значение не исчезало после отправки. */
+
+
+<form action="" method="GET">
+<p>Будь ласка, виберіть мову:</p>
+	<select name="language">
+		<option value="українська" <?php
+			if (!empty($_GET['language']) and $_GET['language'] === 'українська') {
+				echo 'selected';
+			}
+		?>>українська</option>
+		<option value="німецька"
+		<?php
+			if (!empty($_GET['language']) and $_GET['language'] === 'німецька') {
+				echo 'selected';
+			}
+		?>>німецька</option>
+		<option value="польська"
+		<?php
+			if (!empty($_GET['language']) and $_GET['language'] === 'польська') {
+				echo 'selected';
+			}
+		?>>польська</option>
+	</select>
+	<input type="submit">
+</form>
+
