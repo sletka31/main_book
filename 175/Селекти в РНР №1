@@ -1,0 +1,15 @@
+/*С помощью выпадающего списка предложите пользователю выбрать страну, в которой он живет.*/
+
+
+<form action="" method="GET">
+<p>Будь ласка, виберіть країну, де проживаєте:</p>
+	<select name="country">
+		<option>Україна</option>
+		<option>Польща</option>
+		<option>Німеччина</option>
+	</select>
+	<input type="submit">
+</form>
+<?php
+	var_dump($_GET['country']); 
+?>
