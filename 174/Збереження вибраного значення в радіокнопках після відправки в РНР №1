@@ -1,0 +1,44 @@
+/*С помощью переключателей попросите пользователя выбрать его язык. Сделайте так, чтобы выбор не пропадал после отправки формы.*/
+
+
+<form>
+  <p>Будь ласка, виберіть мову:</p>
+  <div>
+    <input type="radio" 
+     name="language" 
+     value="українська" 
+       <?php
+		if (!empty($_GET['language']) and $_GET['language'] === 'українська') {
+			echo 'checked';
+		}
+       ?>
+     >
+    <label for="languageChoice1">Українська</label>
+
+    <input type="radio" 
+           name="language" 
+           value="англійська"
+             <?php
+		if (!empty($_GET['language']) and $_GET['language'] === 'англійська') {
+			echo 'checked';
+		}
+       ?>
+    >
+    <label for="languageChoice2">Англійська</label>
+
+    <input type="radio" 
+           name="language" 
+           value="польська"
+             <?php
+		if (!empty($_GET['language']) and $_GET['language'] === 'польська') {
+			echo 'checked';
+		}
+       ?>
+    >
+    <label for="languageChoice3">Польська</label>
+  </div>
+  <div>
+    <button type="submit">Надіслати</button>
+  </div>
+</form>
+
