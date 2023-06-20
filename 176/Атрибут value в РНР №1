@@ -1,0 +1,15 @@
+/*С помощью выпадающего списка попросите пользователя выбрать его язык.*/
+
+
+<form action="" method="GET">
+<p>Будь ласка, виберіть мову:</p>
+	<select name="language">
+		<option value="українська">українська</option>
+		<option value="німецька">німецька</option>
+		<option value="польська">польська</option>
+	</select>
+	<input type="submit">
+</form>
+<?php
+	var_dump($_GET['language']); 
+?>
