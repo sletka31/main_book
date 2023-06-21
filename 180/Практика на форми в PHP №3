@@ -10,39 +10,23 @@
 </form>
 <?php
   if (!empty ($_GET)) {
-  //$num=$_GET['number'];
-     function getPrimeDivisors($num) {
-		$result = [];
-		$divs = getOwnDivisors($num);
-		
-		foreach ($divs as $div) {
-			if (isPrime($div)) {
-				$result[] = $div;
-			}
-		}
-		
-		return $result;
-	}
-	
-	
-	function getOwnDivisors($num) {
-	  $arr = [];
-	  for ($i = 1; $i <= $num; $i++) {
-	    if ($num % $i === 0) {
-	      $arr [] = $i; 
-	    }
-	  } return $arr;
-	}
-	
-	
-	function isPrime ($num) {
-	  for ($i = 2; $i < $num; $i++) {
-	    if ($num % $i === 0) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
+    function getGenerVisitorsNum ($num) {
+    $result = [];
+    
+    return $result = getDivisiors($num);
+} 
+
+
+function getDivisiors ($num) {
+    $arr = [];
+    
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i === 0) {
+            $arr[] = $i;
+        }
+    } return $arr;
   }
- var_dump (getPrimeDivisors($_GET['number']));
+
+}
+ var_dump(getGenerVisitorsNum ($_GET['number']));
 ?>
