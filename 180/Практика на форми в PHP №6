@@ -1,0 +1,43 @@
+*/Даны 3 инпута. В них вводятся числа. Проверьте, что эти числа являются тройкой Пифагора: квадрат самого большого числа должен быть равен сумме квадратов двух остальных.*/
+
+
+<form action="" method="GET">
+  <p>Введіть число a:</p>
+  <input name="a" 
+    value="<?php 
+      if (isset($_GET['a'])) 
+      echo $_GET['a']?>">
+  <p>Введіть число b:</p>
+  <input name="b"
+    value="<?php 
+      if (isset($_GET['b'])) 
+      echo $_GET['b']?>"
+  >
+  <p>Введіть число c:</p>
+  <input name="c"
+   value="<?php 
+      if (isset($_GET['c'])) 
+      echo $_GET['c']?>"
+  >
+  <input type="submit">
+  
+<?php
+ 
+  if (!empty($_GET)) {
+      $a=$_GET['a'];
+      $b=$_GET['b'];
+      $c=$_GET['c']; 
+    if (($a>$b and $a>$c) and ($a*$a)===($b*$b)+($c*$c)) {
+      echo 'Yes!';
+  } 
+   elseif (($b>$c and $b>$a) and ($b*$b)===($a*$a)+($c*$c)) {
+      echo 'Yes!';
+ 
+  }
+   elseif (($c>$b and $c>$a) and ($c*$c)===($b*$b)+($a*$a)) {
+      echo 'Yes!';
+  } else {
+    echo 'No';
+  }
+}
+?>
