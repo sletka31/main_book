@@ -10,6 +10,7 @@
 <?php  
 if (!empty($_GET)) {
   $str = $_GET['text'];
-  echo strlen ($str);
+  echo 'The number of characters in the text: ' . strlen ($str) . '<br> ';
+  echo 'The number of words in the text: ' . str_word_count ($str) . '<br> ';
 } 
 ?>
