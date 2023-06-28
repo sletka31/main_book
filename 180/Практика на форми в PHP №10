@@ -4,54 +4,36 @@
 
 
 <?php
-
-$months = [
+$month = [
     '1', '2', '3', '4', '5', '6',
     '7', '8', '9', '10', '11', '12',
 ];
-
 ?>
-
-
 <form action="" method="GET">
-        <select name="day">
-            <?php $date = date('d'); ?>
-            <?php foreach (range(1, date('t')) as $val) { ?>
-                <?php $day = sprintf('%02d', $val); ?>
-                <?php $selected = ($day == $date ? ' selected' : ''); ?>
-                <option value="<?= $day ?>"<?= $selected ?>><?= $day ?></option>
-            <?php } ?>
-        </select>
-
-      
-        <select name="month">
-            <?php $date = date('m'); ?>
-            <?php foreach (range(1, 12) as $val) { ?>
-                <?php $day = sprintf('%02d', $val); ?>
-                <?php $selected = ($day == $date ? ' selected' : ''); ?>
-                <option value="<?= $day ?>"<?= $selected ?>><?= $months[--$val] ?></option>
-            <?php } ?>
-        </select>
-
-       
-        <select name="year">
-            <?php $date = date('Y'); ?>
-            <?php foreach (range(1996, 2025) as $val) { ?>
-                <?php $selected = ($val == $date ? ' selected' : ''); ?>
-                <option value="<?= $val ?>"<?= $selected ?>><?= $val ?></option>
-            <?php } ?>
-        </select>
-        <input type="submit">
+    <select name="day">
+        <?php for ($i = 1; $i <= 31; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
+    <select name="month">
+        <?php foreach ($month as $item): ?>
+            <option><?=$item;?></option>
+        <?php endforeach;?>
+    </select>
+    <select name="year">
+        <?php for ($i = 1990; $i <= 2025; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
+    <input type="submit">
 </form>
-    
 <?php
 if (!empty ($_GET)) {
   $days = [0 => 'неділя', 1=> 'понеділок', 2 => 'вівторок', 3 => 'середа', 4 => 'четвер', 5 => 'пятниця', 6  => 'субота', 7 => 'неділя'];
-  $w = date ('w');
-  $d = $_GET['day'];
+  $day = $_GET['day'];
   $month = $_GET['month'];
   $year = $_GET['year'];
   
-  echo $days[date ('w', mktime (0, 0, 0, $month, $d, $year))];
+  echo $days[date ('w', mktime (0, 0, 0, $month, $day, $year))];
 }
 ?>
