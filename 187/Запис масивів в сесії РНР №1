@@ -1,3 +1,40 @@
 /*На одной странице с помощью формы спросите у пользователя имя, возраст, зарплату и еще что-нибудь. Запишите эти данные в одну переменную сессии в виде массива. 
 При заходе на другую страницу переберите сохраненные данные циклом и выведите каждый элемент массива в своем теге li тега ul.*/
 
+
+Файл №1 test1.php:
+<form method="GET">
+  <p>Введіть ваше прізвище</p>
+    <input name="surname">
+  <p>Введіть ваше ім'я</p>
+    <input name="firstname">
+  <p>Введіть ваш вік</p>
+    <input name="age">
+  <p>Введіть розмір вашої ЗП</p>
+    <input name="salary">
+    <input type="submit">
+</form>
+
+<?php
+	session_start();
+	
+	if (!empty($_GET)) {
+		$_SESSION = $_GET;
+	}
+?>
+
+
+Файл №2 test2.php:
+<?php
+  session_start();
+  
+  if (!empty($_SESSION)) {
+      foreach ($_SESSION as $value) {
+      echo '<ul>';
+      echo "<li>$value</li>";
+      echo '</ul>';
+      }
+  }
+  
+?>
+
