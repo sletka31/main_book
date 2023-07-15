@@ -1,0 +1,8 @@
+/* Проверьте, лежит ли в корне вашего сайта файл file.txt. */ 
+
+
+<?php
+  var_dump (file_exists('file.txt'));
+?>
+
+
