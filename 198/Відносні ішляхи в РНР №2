@@ -1,0 +1,12 @@
+/* Напишите код, который прочитает содержимое текстового файла:
+
+/script/
+index.php
+/dir1/
+/dir2/
+test.txt*/
+
+
+<?php
+  echo file_get_contents ('../dir1/dir2/test.txt');
+?>
