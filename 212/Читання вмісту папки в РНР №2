@@ -1,0 +1,13 @@
+/*Пусть в корне вашего сайта лежит папка dir, а в ней какие-то текстовые файлы. Переберите эти файлы циклом и выведите их тексты в браузер. */
+
+
+
+<?php
+  $files = scandir ('dir');
+  $files = array_diff($files, ['..', '.']); 
+  foreach ($files as $file) {
+    $contents = file_get_contents ($file);
+    echo $contents;
+  }
+?>
+
