@@ -1,0 +1,16 @@
+/* Дана папка. Выведите на экран столбец имен подпапок из этой папки. */
+
+
+
+<?php
+	$dir = 'dir';
+	$dirs = array_diff(scandir($dir), ['..', '.']);
+	
+	foreach ($dirs as $dire) {
+		$path = $dir. '/' . $dire; // путь к файлу
+		
+		if (is_dir($path)) {
+			echo $path . '<br>';
+		}
+	}
+?>
