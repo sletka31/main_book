@@ -1,0 +1,15 @@
+/* Дана папка. Выведите на экран столбец имен файлов из этой папки.*/
+
+
+<?php
+	$dir = 'dir';
+	$files = array_diff(scandir($dir), ['..', '.']);
+	
+	foreach ($files as $file) {
+		$path = $dir. '/' . $file; // путь к файлу
+		
+		if (is_file($path)) {
+			echo $path . '<br>';
+		}
+	}
+?>
