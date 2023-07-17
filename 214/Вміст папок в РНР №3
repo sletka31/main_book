@@ -1,0 +1,17 @@
+/* Дана папка. Запишите в конец каждого файла этой папки текущий момент времени.*/
+
+
+
+<?php
+	$dir = 'dir';
+	$files = array_diff(scandir($dir), ['..', '.']);
+	
+	foreach ($files as $file) {
+		$path = $dir. '/' . $file; // путь к файлу
+		
+		if (is_file($path)) {
+      $handle = fopen ($path, 'a');
+	    fwrite ($handle, "\n" . date('Y-m-d H:i:s'));
+		}
+	}
+?>
